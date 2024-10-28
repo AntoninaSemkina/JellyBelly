@@ -1,4 +1,4 @@
-import logo_img from "../../images/logo.webp"
+import logo_img from "../../images/logo.png"
 import style from "./style.module.css"
 
 const Logo =() =>{

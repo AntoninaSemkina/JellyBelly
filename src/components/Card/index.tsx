@@ -1,20 +1,18 @@
 import {FC} from "react"; 
 import style from "./style.module.css"
+import {Bean} from "../../types/bean"
 
-// type Props={
-//     title:string
-// }
-interface Props{
-    title: string;
-    image? : string;
+type Props={
+    data: Bean;
 }
-const Card : FC<Props> =({title, image})=>{
-    return(
-    <div className={style.card}>
-        <img src={image} alt="" />
-        <h2>{title}</h2>
+
+const Card : FC<Props> =({data})=>{
+    return <div className={style.card}>
+        <img src={data.imageUrl} alt="" />
+        <h2>{data.flavorName}</h2>
+        <p>{data.description}</p>
+        {data.sugarFree ? <p>Not sugar</p>:<p>with sugar</p>}
     </div>
-    )
 }
 
 export default Card

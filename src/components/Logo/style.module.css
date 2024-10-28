@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    color: red;
+    color: #e83a4b;
   }
   .logo img{
     width: 40%;
