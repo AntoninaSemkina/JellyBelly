@@ -1,46 +1,15 @@
-// import { useState } from "react";
 import './App.css';
-import Header from './components/Header';
-import Cards from './components/Cards';
-// import Counter from './components/Counter';
-// import Title from './components/Title';
-// import Buttons from './components/Buttons';
-// import Example from './components/Example';
-// import Modal from './components/Modal';
-import Search from './components/Search';
-import { useOnlineStatus, useEffect, useState, createContext, Dispatch } from 'react';
-
-type ContextType = {
-  theme : string;
-  setTheme:Dispatch<React.SetStateAction<string>>;
-}
-
-
-export const ThemeContext = createContext<ContextType | null>(null);
+import Header from "./components/Header/"
+import Card from "./components/Card"
 
 function App() {
-
-  // const [isVisible, setIsVisible] = useState(true);
-  const [filterValue, setFilterValue] = useState ("");
-  console.log("filterValue", filterValue);
-  // const status = useOnlineStatus ();
-  // console.log("status",status);
-  const[theme, setTheme] = useState("dark");
   return (
-    <ThemeContext.Provider value={{theme , setTheme}}>
-    <div className={`container ${theme}`}>
-      <Header />
-      <Search setFilterValue = {setFilterValue}/>
-      <Cards filterValue = {filterValue}/>
-      {/* <Counter/> */}
-      {/* <Title data = {value}/>
-      <Buttons value = {value} setValue = {setValue}/> */}
-      {/* <button onClick={()=>{setIsVisible(!isVisible)}}>Visible</button>
-      {isVisible && <Example/>} */}
-      {/* <Example/> */}
+    <div className="container">
+      <Header/>
+      <Card title="Jelly Bob 1" image= "https://avatars.mds.yandex.net/i?id=6b105c66ca757dab387a13295ddd5787_l-5239122-images-thumbs&n=13"/>
+      <Card title="Jelly Bob 1" image= "https://shopsweetiescandyaz.com/cdn/shop/files/f29cd6e0-1f7b-42c3-bda0-6c76ecaafdf7_512x512.jpg?v=1712446536"/>
     </div>
-    </ThemeContext.Provider>
-  );
+  )
 }
 
 export default App

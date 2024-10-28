@@ -17,18 +17,22 @@ a{
 }
 
 
-
-
 @font-face{
   font-family: "Lobster";
   src: url("./fonts/Lobster.otf");
 }
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
 
-.dark{
+
+
+/* .dark{
   background-color: #341616;
   color:#fff;
 }
 .light {
   background-color: #fcc8c8;
   color: #000;
-}
+} */
