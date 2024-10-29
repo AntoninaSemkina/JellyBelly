@@ -11,28 +11,19 @@ a{
   text-decoration: none;
   color: inherit;
 }
-.container {
-  padding: 0 50px;
-  transition: all 0.5s;
-}
-
-
 @font-face{
   font-family: "Lobster";
   src: url("./fonts/Lobster.otf");
 }
 .container{
-  max-width: 1200px;
-  margin: auto;
+  padding: 0 50px;
+  transition: all 500ms linear;
 }
-
-
-
-/* .dark{
-  background-color: #341616;
+.dark{
+  background-color: rgb(92, 14, 22);
   color:#fff;
 }
 .light {
   background-color: #fcc8c8;
   color: #000;
-} */
+}
