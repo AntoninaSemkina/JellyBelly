@@ -1,18 +1,18 @@
-import './App.css';
-import Header from "./components/Header/"
-import Cards from "./components/Cards"
-import allBeans from "./data/beans.json"
-
-
+import "./App.css";
+import Header from "./components/Header/";
+import Cards from "./components/Cards";
+import allBeans from "./data/beans.json";
+import Counter from "./components/Counter";
 
 function App() {
-  console.log(allBeans)
+  console.log(allBeans);
   return (
     <div className="container">
-      <Header/>
-      <Cards/>
+      <Header />
+      {/* <Cards/> */}
+      <Counter />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
