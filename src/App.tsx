@@ -1,16 +1,20 @@
 import "./App.css";
+import { useState } from "react";
 import Header from "./components/Header/";
 import Cards from "./components/Cards";
-import allBeans from "./data/beans.json";
 import Counter from "./components/Counter";
+import Title from "./components/Title";
+import Buttons from "./components/Buttons";
 
 function App() {
-  console.log(allBeans);
+  const [value, setValue] = useState(0);
+
   return (
     <div className="container">
       <Header />
       {/* <Cards/> */}
-      <Counter />
+      <Title data={value} />
+      <Buttons value={value} setValue={setValue} />
     </div>
   );
 }
