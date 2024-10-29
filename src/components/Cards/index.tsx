@@ -1,11 +1,16 @@
 import style from "./style.module.css";
 import Card from "../Card";
 import { Bean } from "../../types/bean";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 
-const Cards = () => {
-  const [allBeans, setAllBeans] = useState<null | Bean[]>(null);
+type Props = {
+  filterValue: string;
+};
 
+const Cards: FC<Props> = ({ filterValue }) => {
+  const [initialBeans, setInitialBeans] = useState<null | Bean[]>(null);
+
+  const [updateBeans, setUpdateBeans] = useState<null | Bean[]>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -14,11 +19,12 @@ const Cards = () => {
       setIsError(false);
       setIsLoading(true);
       const req = await fetch(
-        "https://jellybellywikiapi.onrender.com/api/Beans"
+        "https://jellybellywikiapi.onrender.com/api/Beans?pageIndex=1&pageSize=100"
       );
       const data = await req.json();
       setIsLoading(false);
-      setAllBeans(data.items);
+      setInitialBeans(data.items);
+      setUpdateBeans(data.items);
     } catch (e) {
       console.log("ERROR->", e);
       setIsLoading(false);
@@ -28,15 +34,22 @@ const Cards = () => {
   useEffect(() => {
     getData();
   }, []);
-
+  useEffect(() => {
+    if (filterValue) {
+      const newArray = initialBeans?.filter((item) =>
+        item.flavorName.includes(filterValue)
+      );
+      newArray && setUpdateBeans(newArray);
+    } else {
+      setUpdateBeans(initialBeans);
+    }
+  }, [filterValue]);
   return (
     <div className={style.container}>
       {isLoading && <p>...loading</p>}
       {isError && <p>перезагрузите страницу!</p>}
-      {allBeans &&
-        allBeans.map((bean) => {
-          return <Card data={bean} key={bean.beanId} />;
-        })}
+      {updateBeans &&
+        updateBeans.map((bean) => <Card data={bean} key={bean.beanId} />)}
     </div>
   );
 };

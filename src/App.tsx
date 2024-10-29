@@ -2,18 +2,17 @@ import "./App.css";
 import { useState } from "react";
 import Header from "./components/Header/";
 import Cards from "./components/Cards";
-import Counter from "./components/Counter";
-import Title from "./components/Title";
-import Buttons from "./components/Buttons";
-import Example from "./components/Example";
+import Search from "./components/Search";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [filterValue, setFilterValue] = useState("");
+  console.log("filterValue", filterValue);
 
   return (
     <div className="container">
       <Header />
-      <Cards />
+      <Search setFilterValue={setFilterValue} />
+      <Cards filterValue={filterValue} />
     </div>
   );
 }
