@@ -25,7 +25,6 @@ const BeanPage = () => {
 
   return (
     <>
-      <Header />
       <div>
         {beanData && (
           <div className="">

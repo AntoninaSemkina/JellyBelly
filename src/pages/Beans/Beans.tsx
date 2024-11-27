@@ -8,7 +8,6 @@ const Beans = () => {
 
   return (
     <>
-      <Header />
       <Search setFilterValue={setFilterValue} />
       <Cards filterValue={filterValue} />
     </>

@@ -5,7 +5,6 @@ import main from "../../images/main.gif";
 const Home = () => {
   return (
     <>
-      <Header />
       <div className={style.home_container}>
         <img src={main} alt="" />
         <div className={style.info}>
