@@ -6,6 +6,7 @@ import Beans from "./pages/Beans/Beans";
 import Recipes from "./pages/Recipes/Recipes";
 import Combinations from "./pages/Combinations/Combinations";
 import History from "./pages/History/History";
+import BeanPage from "./pages/Bean/Bean";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/history",
     element: <History />,
+  },
+  {
+    path: "/bean/:id",
+    element: <BeanPage />,
   },
   {
     path: "*",
