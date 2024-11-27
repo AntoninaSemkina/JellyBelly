@@ -1,13 +1,14 @@
+import { Link } from "react-router";
 import SwitchTheme from "../SwitchTheme";
 import style from "./style.module.css";
 const Nav = () => {
   return (
     <nav className={style.container}>
-      <a>Beans</a>
-      <a>Facts</a>
-      <a>Recipes</a>
-      <a>Combinations</a>
-      <a>History</a>
+      <Link to="/beans">Beans</Link>
+      <Link to="/facts">Facts</Link>
+      <Link to="/recipes">Recipes</Link>
+      <Link to="/combinations">Combinations</Link>
+      <Link to="/history">History</Link>
       <SwitchTheme />
     </nav>
   );
