@@ -1,4 +1,3 @@
-import Header from "../../components/Header";
 import style from "./style.module.css";
 import main from "../../images/main.gif";
 
@@ -6,10 +5,13 @@ const Home = () => {
   return (
     <>
       <div className={style.home_container}>
-        <img src={main} alt="" />
+        <div className={style.img}>
+          <img src={main} alt="" />
+        </div>
+
         <div className={style.info}>
           <h1>Welcome to the World of Jelly Belly:</h1>
-          <p> A Rainbow of Flavors Awaits!</p>
+          <h3> A Rainbow of Flavors Awaits!</h3>
         </div>
       </div>
     </>
