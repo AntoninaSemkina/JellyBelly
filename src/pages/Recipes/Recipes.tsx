@@ -1,10 +1,15 @@
-import Header from "../../components/Header";
+import { useState } from "react";
+import style from "./style.module.css";
+import RecipeCards from "../../components/RecipeCards.tsx/RecipeCards";
 
 const Recipes = () => {
+  const [filterValue] = useState("");
+
   return (
-    <>
-      <h1>RECIPES</h1>
-    </>
+    <div className={style.container}>
+      <h1>Explore Recipes...</h1>
+      <RecipeCards filterValue={filterValue} />
+    </div>
   );
 };
 

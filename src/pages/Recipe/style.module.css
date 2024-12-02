@@ -18,7 +18,8 @@
 .container1 p,
 .btn,
 .container1 strong {
-  background-color: transparent; /* Убираем фон у дочерних элементов */
+  background-color: transparent;
+  font-family: var(--text-font);
 }
 .container1 div {
   display: flex;
@@ -29,26 +30,11 @@
 .container1 img {
   margin: auto;
   width: 50%;
+  border-radius: 20px;
 }
-.informations {
-  display: flex;
-  gap: 10px; /* Расстояние между элементами */
-  justify-content: center; /* Центрирует элементы по горизонтали */
-}
-.informations ul {
-  display: grid; /* Используем сетку */
-  grid-template-columns: repeat(4, 1fr); /* 4 элемента в строку */
-  gap: 10px;
-  background-color: transparent; /* Убираем фон у дочерних элементов */
-  width: 100%; /* Гарантируем, что контейнер занимает всю ширину */
-}
-.informations li {
-  list-style: none;
-  box-sizing: border-box;
-  background-color: transparent; /* Убираем фон у дочерних элементов */
-}
+
 .container1 p {
-  text-align: center;
+  text-align: left;
 }
 .btn {
   color: var(--head-color);
@@ -69,4 +55,13 @@
 .btn:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ingredient {
+  font-size: 0.9rem;
 }

@@ -11,6 +11,7 @@ import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Loader from "./components/Loader/Loader";
 import Review from "./pages/Review/Review";
+import Recipe from "./pages/Recipe/Recipe";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
       { path: "beans", element: <Beans /> },
       { path: "recipes", element: <Recipes /> },
+      { path: "recipe/:id", element: <Recipe /> },
       { path: "combinations", element: <Combinations /> },
       { path: "history", element: <History /> },
       { path: "beanpage", element: <BeanPage /> },

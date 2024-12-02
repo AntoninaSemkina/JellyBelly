@@ -1,5 +1,6 @@
 import React from "react";
 import { Bean } from "../../types/bean";
+
 interface InfoProps {
   beanData: Bean;
 }

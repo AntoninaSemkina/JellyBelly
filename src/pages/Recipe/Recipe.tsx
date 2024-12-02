@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
-import { Bean } from "../../types/bean";
 import style from "./style.module.css";
-import Info from "./info";
+import { recipe } from "../../types/recipe";
 
-const BeanPage = () => {
+const Recipe = () => {
   const params = useParams();
-  const [beanData, setBeanData] = useState<Bean | null>(null);
+  const [recipeData, setRecipeData] = useState<recipe | null>(null);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const req = await fetch(
-          `https://jellybellywikiapi.onrender.com/api/beans/${params.id}`
+          `https://jellybellywikiapi.onrender.com/api/recipes/${params.id}`
         );
         const data = await req.json();
-        setBeanData(data);
+        setRecipeData(data);
       } catch (e) {
         console.log("Error->", e);
       }
@@ -26,22 +25,29 @@ const BeanPage = () => {
   return (
     <>
       <div className={style.container1}>
-        {beanData && (
+        {recipeData && (
           <div>
-            <h1>{beanData.flavorName}</h1>
-            <p>{beanData.description}</p>
-            <img src={beanData.imageUrl} alt="bean" />
-            <h4>Group Name:</h4>
-            <div>{beanData.groupName}</div>
-            <h4>Ingredients:</h4>
-            <div>{beanData.ingredients}</div>
-            <div className={style.informations}>
-              <Info beanData={beanData} />
+            <h1>{recipeData.name}</h1>
+            <h4>{recipeData.description}</h4>
+            <p>Preparation time: {recipeData.prepTime}</p>
+            <p>Cook time: {recipeData.cookTime}</p>
+            <p>Total time: {recipeData.totalTime}</p>
+            <p>Recipe makes {recipeData.makingAmount}</p>
+            <img src={recipeData.imageUrl} alt="bean" />
+            <h4>Ingredients</h4>
+            <div className={style.ingredients}>
+              {recipeData.ingredients.map((ingredient, index) => (
+                <p key={index} className={style.ingredient}>
+                  {ingredient}
+                </p>
+              ))}
             </div>
+            <h4>Directions</h4>
+            <div>{recipeData.directions}</div>
           </div>
         )}
-        <Link to={`/beans/`} className={style.btn}>
-          <h4>Back to Beans</h4>
+        <Link to={`/recipes/`} className={style.btn}>
+          <h4>Back to recipes</h4>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -63,4 +69,4 @@ const BeanPage = () => {
   );
 };
 
-export default BeanPage;
+export default Recipe;
