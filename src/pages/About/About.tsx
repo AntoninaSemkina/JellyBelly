@@ -1,9 +1,14 @@
-import Header from "../../components/Header";
+import style from "./style.module.css";
+import Info from "./info";
 
 const About = () => {
   return (
     <>
-      <h1>ABOUT</h1>;
+      <div className={style.container1}>
+        <div className={style.informations}>
+          <Info />
+        </div>
+      </div>
     </>
   );
 };

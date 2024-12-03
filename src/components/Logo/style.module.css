@@ -12,3 +12,8 @@
   width: 40%;
   background-color: var(--light-body-color);
 }
+@media screen and (max-width: 390px) {
+  .logo {
+    width: 100px;
+  }
+}

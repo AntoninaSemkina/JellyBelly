@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import Card from "../Card";
 import { Bean } from "../../types/bean";
 import { useState, useEffect, FC } from "react";
+import Loader from "../Loader/Loader";
 
 type Props = {
   filterValue: string;
@@ -46,7 +47,11 @@ const Cards: FC<Props> = ({ filterValue }) => {
   }, [filterValue]);
   return (
     <div className={style.container}>
-      {isLoading && <p>...loading</p>}
+      {isLoading && (
+        <p>
+          <Loader />
+        </p>
+      )}
       {isError && <p>перезагрузите страницу!</p>}
       {updateBeans &&
         updateBeans.map((bean) => <Card data={bean} key={bean.beanId} />)}

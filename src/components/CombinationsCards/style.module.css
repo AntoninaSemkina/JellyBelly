@@ -32,3 +32,9 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 390px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

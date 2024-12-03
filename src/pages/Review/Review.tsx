@@ -22,7 +22,7 @@ const Review = () => {
   return (
     <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
       <label className={style.labelName}>
-        Имя{" "}
+        Name{" "}
         <input
           type="text"
           {...register("user_name", {
@@ -42,11 +42,14 @@ const Review = () => {
       {errors.user_name && <p>{errors.user_name.message}</p>}
 
       <select {...register("category")}>
-        <option value="a">Select A</option>
-        <option value="b">Select B</option>
-        <option value="c">Select C</option>
+        <option value="a">Review about product</option>
+        <option value="b">Review about service quality</option>
+        <option value="c">Other questions to company</option>
       </select>
-      <input className={style.btn} type="submit" />
+      <input className={style.review} type="text" />
+      <button className={style.btn} type="submit">
+        Send
+      </button>
     </form>
   );
 };

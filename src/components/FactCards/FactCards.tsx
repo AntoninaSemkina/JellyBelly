@@ -3,6 +3,7 @@ import FactCard from "../FactCard/FactCard";
 import { useState, useEffect, FC } from "react";
 import { fact } from "../../types/fact";
 import redBean from "../../images/redBean.png";
+import Loader from "../Loader/Loader";
 
 type Props = {
   filterValue: string | null;
@@ -51,7 +52,11 @@ const FactCards: FC<Props> = ({ filterValue }) => {
 
   return (
     <div className={style.container}>
-      {isLoading && <p>...loading</p>}
+      {isLoading && (
+        <p>
+          <Loader />
+        </p>
+      )}
       {isError && <p>Перезагрузите страницу!</p>}
       <div className={style.grid}>
         {/* Отображение изображения на месте первого факта */}

@@ -1,3 +1,4 @@
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import style from "./style.module.css";
@@ -8,6 +9,7 @@ const Header = () => {
       <div className={style.container}>
         <Logo />
         <Nav />
+        <BurgerMenu />
       </div>
     </header>
   );

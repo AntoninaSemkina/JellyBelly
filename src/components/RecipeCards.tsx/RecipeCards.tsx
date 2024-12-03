@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import { useState, useEffect, FC } from "react";
 import { recipe } from "../../types/recipe";
 import RecipeCard from "../RecipeCard/RecipeCard";
+import Loader from "../Loader/Loader";
 
 type Props = {
   filterValue: string | null;
@@ -48,7 +49,11 @@ const RecipeCards: FC<Props> = ({ filterValue }) => {
 
   return (
     <div className={style.container}>
-      {isLoading && <p>...loading</p>}
+      {isLoading && (
+        <p>
+          <Loader />
+        </p>
+      )}
       {isError && <p>Перезагрузите страницу!</p>}
       <div className={style.grid}>
         {/* Факты, начиная со второго */}

@@ -65,3 +65,32 @@
 .ingredient {
   font-size: 0.9rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .container1 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .container1 {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .container1 h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  .informations ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container1 div,
+  .informations {
+    font-size: 10px;
+  }
+  .container1 img {
+    width: 100%;
+  }
+  .informations {
+    font-size: 10px;
+  }
+}
