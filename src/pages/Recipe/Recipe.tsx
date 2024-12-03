@@ -46,7 +46,7 @@ const Recipe = () => {
             <div>{recipeData.directions}</div>
           </div>
         )}
-        <Link to={`/recipes/`} className={style.btn}>
+        <Link to={`/JellyBelly/recipes/`} className={style.btn}>
           <h4>Back to recipes</h4>
           <svg
             aria-hidden="true"

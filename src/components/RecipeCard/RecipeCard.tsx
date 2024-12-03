@@ -23,7 +23,7 @@ const RecipeCard: FC<Props> = ({ data }) => {
         {data.totalTime && `Total Time: ${data.totalTime}`}
       </p>
 
-      <Link to={`/recipe/${data.recipeId}`} className={style.btn}>
+      <Link to={`/JellyBelly/recipe/${data.recipeId}`} className={style.btn}>
         check out this recipe{" "}
         <svg
           aria-hidden="true"

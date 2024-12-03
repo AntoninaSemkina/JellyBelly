@@ -40,7 +40,7 @@ const BeanPage = () => {
             </div>
           </div>
         )}
-        <Link to={`/beans/`} className={style.btn}>
+        <Link to={`/JellyBelly/beans/`} className={style.btn}>
           <h4>Back to Beans</h4>
           <svg
             aria-hidden="true"

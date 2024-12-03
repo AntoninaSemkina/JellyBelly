@@ -15,7 +15,7 @@ import Recipe from "./pages/Recipe/Recipe";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/JellyBelly",
     element: <Layout />,
     loader: Loader,
     children: [
