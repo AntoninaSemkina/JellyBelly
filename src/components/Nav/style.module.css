@@ -30,6 +30,6 @@
 
 @media screen and (max-width: 390px) {
   .container {
-    display: none; /* Скрываем обычное меню в бургер-меню */
+    display: none;
   }
 }

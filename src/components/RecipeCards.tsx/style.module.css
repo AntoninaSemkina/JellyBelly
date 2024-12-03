@@ -12,7 +12,7 @@
 }
 
 .imgWrapper {
-  grid-column: span 1; /* Занимает одну колонку */
+  grid-column: span 1;
   display: flex;
   justify-content: center;
   align-items: center;

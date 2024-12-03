@@ -24,17 +24,17 @@
   color: var(--dark-red);
   font-size: 0.8rem;
   height: 100px;
-  box-sizing: border-box; /* Учитывает padding в ширине/высоте */
+  box-sizing: border-box;
 }
 .make,
 .time {
   color: var(--dark-red);
   font-size: 0.8rem;
-  min-height: 20px; /* Зарезервировать место */
+  min-height: 20px;
   box-sizing: border-box;
 }
 .hidden {
-  visibility: hidden; /* Текст скрыт, но место занято */
+  visibility: hidden;
 }
 .card:hover {
   border-radius: 10px;

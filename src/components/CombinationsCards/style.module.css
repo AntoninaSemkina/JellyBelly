@@ -6,13 +6,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 элемента в строке */
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: center;
 }
 
 .imgWrapper {
-  grid-column: span 1; /* Занимает одну колонку */
+  grid-column: span 1;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,19 +7,19 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
 .emptyBox {
-  grid-column: span 1; /* Пустой блок занимает 1 колонку */
-  height: 100%; /* Растягивает пустой блок */
-  background-color: transparent; /* Пустой бокс */
+  grid-column: span 1;
+  height: 100%;
+  background-color: transparent;
 }
 
 .largeCard {
-  grid-column: span 2; /* Факт занимает колонки 2-3 */
-  grid-row: span 1; /* Занимает 1 строку */
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 .card {
