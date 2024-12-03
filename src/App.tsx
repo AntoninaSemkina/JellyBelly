@@ -1,5 +1,5 @@
 import "./App.css";
-import { createContext, useState, Dispatch } from "react";
+import { createContext, Dispatch } from "react";
 import { RouterProvider } from "react-router";
 import router from "./router";
 

@@ -1,5 +1,4 @@
 import style from "./style.module.css";
-import FactCard from "../FactCard/FactCard";
 import { useState, useEffect, FC } from "react";
 import redBean from "../../images/redBean.png";
 import { combination } from "../../types/combination";

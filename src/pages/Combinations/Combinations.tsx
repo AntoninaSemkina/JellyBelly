@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import CombinationsCards from "../../components/CombinationsCards/CombinationsCards";
 
 const Combinations = () => {
-  const [filterValue] = useState(""); // Фильтр можно позже заменить на динамический ввод
+  const [filterValue] = useState("");
 
   return (
     <div className={style.container}>

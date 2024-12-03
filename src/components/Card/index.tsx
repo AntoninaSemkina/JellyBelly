@@ -9,7 +9,7 @@ type Props = {
 
 const Card: FC<Props> = ({ data }) => {
   return (
-    <Link to={`/bean/${data.beanId}`} className={style.card}>
+    <Link to={`/JellyBelly/bean/${data.beanId}`} className={style.card}>
       <h4>{data.flavorName}</h4>
       <img src={data.imageUrl} alt="" />
       <p>{data.description}</p>
